@@ -1,0 +1,33 @@
+:root {
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+}
+
+button {
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+#start{
+  background-color: #4CAF50; /* Green */
+}
+
+#reset{
+  background-color: #4c53af; /* Green */
+}
+
+#stop{
+  background-color: #aa1313; /* Green */
+}
