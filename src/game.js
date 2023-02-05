@@ -82,7 +82,6 @@ export class GameWorld extends EventTarget{
 
         super();
 
-        
         /**
          * Canvas element used as the game world
          * @type {HTMLCanvasElement}
@@ -199,7 +198,8 @@ export class GameWorld extends EventTarget{
             
             
                 let centerIndex = this.gridToIndex(x, y);
-
+                
+                // The rules of game of life 
                 if (numAlive == 2){
                     // Do nothing
                     this.gameObjects[centerIndex].nextAlive = this.gameObjects[centerIndex].alive;
@@ -238,15 +238,17 @@ export class GameWorld extends EventTarget{
             this.gameObjects[i].draw();
         }
 
+        // increment generation
         this.nGenerations += 1;
 
+        // dispatch current generation
         this.dispatchEvent(new CustomEvent("gen", {detail: this.nGenerations}));       
 
+        // request new animation frame
         setTimeout( () => {
             if (this.animation) {
                 this.animation = window.requestAnimationFrame(() => this.gameLoop());
             }
         }, 500);
     }
-
 }

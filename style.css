@@ -4,9 +4,17 @@
 }
 
 .center {
-  margin: auto;
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+canvas {
+  width: 100%;
+  max-width: 750px;
+  height: auto;
+}
+
 
 button {
   border: none;

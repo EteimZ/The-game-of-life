@@ -2,12 +2,13 @@ import { GameWorld } from "./game";
 
 // Client code
 window.onload = () => {
+    // Create new instance of the GameWorld class
     const game = new GameWorld("canvas");
 
     const startBtn = document.getElementById("start");
     const resetBtn = document.getElementById("reset");
     const stopBtn = document.getElementById("stop");
-
+    
     const generation = document.getElementById("gen");
     
     // Listen to generation event from the object 
